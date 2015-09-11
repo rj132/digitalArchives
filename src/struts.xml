@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+    "http://struts.apache.org/dtds/struts-2.0.dtd">  
+  
+<struts>  
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.multipart.maxSize" value="10485760"></constant>
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant><!--是否开启动态方法调用 -->
+    <!-- <package name="exception">
+		<global-exception-mappings>
+			<exception-mapping result="allException" exception="java.lang.Exception"/>
+		</global-exception-mappings >
+		<action name="exceptionAction">
+			<exception-mapping result="sql" exception="java.sql.SQLException"/>
+			<result name="allException">/error.jsp</result>
+			<result name="sql">/sqlError.jsp</result>
+		</action>
+	</package> -->
+	
+	<!--全局变量  -->
+	<!-- <package name="global" extends="struts-default">
+		<global-results>
+			<result name="allException">/allException.jsp</result>
+			<result name="login">login.jsp</result>
+		</global-results>
+	</package> -->
+    
+    <!--登录过滤器  -->
+    <!-- <package name="loginInterceptor" extends="struts-default">
+    	<interceptors>
+	 		<interceptor name="permission" class="com.HomeworkHelper.interceptor.LoginInterceptor" />
+	 	    <interceptor-stack name="permissionStack">
+		 		<interceptor-ref name="permission" />
+		 		<interceptor-ref name="defaultStack" />
+	 	    </interceptor-stack>
+	 	</interceptors>
+    </package> -->
+    
+    <!--文件上传过滤器  -->
+    <!-- <package name="uploadInterceptor" extends="json-default">
+    	<interceptors>
+	 	    <interceptor-stack name="uploadStack">
+		 		 <interceptor-ref name="fileUpload">  
+                 	<param name="allowedTypes">  
+                    	image/png,image/gif,image/jpeg  
+                 	</param>  
+               	</interceptor-ref> 
+		 		<interceptor-ref name="defaultStack" />
+	 	    </interceptor-stack>
+	 	</interceptors>
+    </package> -->
+    
+	<!-- <include file="struts-student.xml"/> -->
+	<include file="struts-login.xml"/>
+</struts> 
