@@ -1,5 +1,7 @@
 package com.digitalArchives.action;
 
+import com.digitalArchives.dao.hibernate.UserDao;
+import com.digitalArchives.modal.User;
 import com.opensymphony.xwork2.Action;
 
 public class LoginAction implements Action {
@@ -29,6 +31,9 @@ public class LoginAction implements Action {
 	}
 	
 	public String validateUser() throws Exception {
+		User user = new User();
+		UserDao userDao = new UserDao();
+		userDao.validateUser(user);
 		return "show";
 	}
 
