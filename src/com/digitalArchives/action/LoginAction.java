@@ -32,8 +32,11 @@ public class LoginAction implements Action {
 	
 	public String validateUser() throws Exception {
 		User user = new User();
+		user.setName(name);
 		UserDao userDao = new UserDao();
 		userDao.validateUser(user);
+		int i = 0;
+		i++;
 		return "show";
 	}
 

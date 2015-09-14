@@ -12,7 +12,7 @@ public class UserDao {
 			Session session = HibernateSession.getSession();
 			HibernateSession.beginTransaction();
 			Query query = session.createQuery("from User");
-			return (User)query.list();
+			return (User)query.uniqueResult();
 		}catch(Exception ex) {
 			throw ex;
 		}
