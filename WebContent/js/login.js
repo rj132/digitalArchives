@@ -1,4 +1,3 @@
-
 $($("#login").bind("click", function () {
 	$.ajax({ 
         type: "post", 

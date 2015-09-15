@@ -10,7 +10,13 @@
 				index.jsp
 			</result> -->
 			<result name="validated" type="json">
-            	<param name="root">username</param>
+            	<param name="root">message</param>
+            </result>
+			<result name="validate_fail" type="json">
+            	<param name="root">message</param>
+            </result>
+			<result name="error" type="json">
+            	<param name="root">message</param>
             </result>
         </action>
     </package>
