@@ -9,6 +9,9 @@
         	<result name="show">
 				login.jsp
 			</result>
+			<result name="HelloServletUrl">
+				login.jsp
+			</result>
         </action>
     </package>
 </struts> 

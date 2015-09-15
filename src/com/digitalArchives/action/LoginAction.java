@@ -39,5 +39,9 @@ public class LoginAction implements Action {
 		i++;
 		return "show";
 	}
+	
+	public String HelloServletUrl() throws Exception {
+		return "HelloServletUrl";
+	}
 
 }
