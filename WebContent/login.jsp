@@ -7,12 +7,12 @@
 	</head>
 	<body>
 	   	<form>
-           <input id="username" type="text" name="username" value="jack"/>
-           <input id="password" type="password" name="password" value="111"/>
+           <input id="username" type="text" name="username" value="linlianhuai"/>
+           <input id="password" type="password" name="password" value="123456"/>
            <input id="login" type="button" value="登录">
        </form>
   	</body>
   	<script src="bootstrap/js/jquery-1.10.2.js"></script>
-  	<script src="js/login.js"></script>
+  	<script src="js/login_js.js"></script>
 </html>
 
