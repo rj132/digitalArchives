@@ -16,11 +16,9 @@ function createXHR(){
 			catch(e){
 			}			
 		}
-	
 	}else {
 		throw new Error('not support');
 	}
-
 }
 
 var xhr = createXHR();

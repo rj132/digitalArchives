@@ -4,14 +4,14 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">  
   
 <struts>
-    <package name="Login" extends="struts-default">  
+    <package name="Login" extends="json-default">  
         <action name="Login_*" class="com.digitalArchives.action.LoginAction" method="{1}">
-        	<result name="show">
-				login.jsp
-			</result>
-			<result name="HelloServletUrl">
-				login.jsp
-			</result>
+        	<!-- <result name="validated">
+				index.jsp
+			</result> -->
+			<result name="validated" type="json">
+            	<param name="root">username</param>
+            </result>
         </action>
     </package>
 </struts> 

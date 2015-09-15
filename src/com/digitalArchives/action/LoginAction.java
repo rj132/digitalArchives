@@ -5,15 +5,15 @@ import com.digitalArchives.modal.User;
 import com.opensymphony.xwork2.Action;
 
 public class LoginAction implements Action {
-	private String name;
+	private String username;
 	private String password;
 
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -32,12 +32,10 @@ public class LoginAction implements Action {
 	
 	public String validateUser() throws Exception {
 		User user = new User();
-		user.setName(name);
-		UserDao userDao = new UserDao();
-		userDao.validateUser(user);
+		user.setUsername(username);
 		int i = 0;
 		i++;
-		return "show";
+		return "validated";
 	}
 	
 	public String HelloServletUrl() throws Exception {
