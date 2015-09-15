@@ -4,10 +4,15 @@ import java.sql.Timestamp;
 
 public class User {
 	private Integer id;
+	private String name;
 	private String username;
 	private String password;
 	private String phone;
+	private Integer age;
 	private String sex;
+	private String id_card_type;
+	private String id_card_code;
+	private String email;
 	private Integer money;
 	private Timestamp create_time;
 	private Timestamp login_time;
@@ -17,6 +22,12 @@ public class User {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getUsername() {
 		return username;
@@ -36,11 +47,35 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 	public String getSex() {
 		return sex;
 	}
 	public void setSex(String sex) {
 		this.sex = sex;
+	}
+	public String getId_card_type() {
+		return id_card_type;
+	}
+	public void setId_card_type(String id_card_type) {
+		this.id_card_type = id_card_type;
+	}
+	public String getId_card_code() {
+		return id_card_code;
+	}
+	public void setId_card_code(String id_card_code) {
+		this.id_card_code = id_card_code;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public Integer getMoney() {
 		return money;
