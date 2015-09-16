@@ -71,6 +71,7 @@ var EventUtil = {
 window.onload = function(){
 	var lib = new Lib();
 	var btn = lib.getId("login");
+	var username = 
 	EventUtil.addHandler(btn,"click",function(){
 		var xhr = createXHR();
 		//alert(xhr);    //object XMLHttpRequest 

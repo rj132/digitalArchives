@@ -13,6 +13,6 @@
        </form>
   	</body>
   	<script src="bootstrap/js/jquery-1.10.2.js"></script>
-  	<script src="js/login_js.js"></script>
+  	<script src="js/login.js"></script>
 </html>
 
