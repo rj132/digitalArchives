@@ -7,8 +7,8 @@
 	</head>
 	<body>
 	   	<form>
-           <input id="username" type="text" name="username" value="linlianhuai"/>
-           <input id="password" type="password" name="password" value="123456"/>
+           <input id="username" type="text" name="username" class="indispensable" value="linlianhuai"/>
+           <input id="password" type="password" name="password" class="indispensable" value="123456"/>
            <input id="login" type="button" value="登录">
        </form>
   	</body>
