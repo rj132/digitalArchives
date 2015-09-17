@@ -25,10 +25,10 @@ var Lib = function(){};
 Lib.prototype.getId = function(id){
 	var ele = document.getElementById(id);
 	return ele;
-}
+};
 
 var EventUtil = {	 
-	 addHandler: function(element, type, handler){    //绑定事件
+	 addHandler: function(element, type, handler){
 					if (element.addEventListener){
 						 element.addEventListener(type, handler, false);
 					 } else if (element.attachEvent){
@@ -37,7 +37,7 @@ var EventUtil = {
 						 element["on" + type] = handler;
 					 }
 				 },
-	 removeHandler: function(element, type, handler){    //移除事件
+	 removeHandler: function(element, type, handler){
 					if (element.removeEventListener){
 						 element.removeEventListener(type, handler, false);
 					 } else if (element.detachEvent){
@@ -46,20 +46,20 @@ var EventUtil = {
 						 element["on" + type] = null;
 					 }
 				 },
-	 getEvent: function(event){                          //获取事件
+	 getEvent: function(event){
 					return event ? event : window.event;
 				 },
-	 getTarget: function(event){                          //绑定事件源
+	 getTarget: function(event){                 
 					 return event.target || event.srcElement;
 				 },
-	 preventDefault: function(event){                     //阻止默认行为
+	 preventDefault: function(event){     
 					 if (event.preventDefault){
 						 event.preventDefault();
 					 } else {
 						 event.returnValue = false;
 					 }
 				 },
-	 stopPropagation: function(event){                 //阻止冒泡
+	 stopPropagation: function(event){ 
 						 if (event.stopPropagation){
 							 event.stopPropagation();
 						 } else {
@@ -71,15 +71,10 @@ var EventUtil = {
 window.onload = function(){
 	var lib = new Lib();
 	var btn = lib.getId("login");
-	var username = 
 	EventUtil.addHandler(btn,"click",function(){
 		var xhr = createXHR();
-		//alert(xhr);    //object XMLHttpRequest 
-		//准备请求
-		xhr.open('get','Login_validateUser.action?username=linlianhuai&password=123456',false); //准备发送请求，以get、同步方式
-		//发送请求
+		xhr.open('get','Login_validateUser.action?username=linlianhuai&password=123456',false);
 		xhr.send(null);
-		//查看返回结果
 		alert(xhr.responseText);
 	});
 };
