@@ -1,12 +1,12 @@
 $(document).ready(function(){
-	$("#username").blur(function(){
+	$('#username').bind('input propertychange', function() {
 		if($("#username").val()!=""){
 			$(this).attr("class","indispensable ok");
 		} else {
 			$(this).attr("class","indispensable");
 		}
 	});
-	$("#password").blur(function(){
+	$('#password').bind('input propertychange', function() {
 		if($("#password").val()!=""){
 			$(this).attr("class","indispensable ok");
 		} else {
@@ -43,4 +43,5 @@ $(document).ready(function(){
 	        return false;
 	    }
 	}
+
 });
